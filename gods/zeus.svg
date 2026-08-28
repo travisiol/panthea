@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -25 300 450" width="300" height="450">
+  <defs>
+    <linearGradient id="zBg" x1=".2" y1="0" x2=".8" y2="1">
+      <stop offset="0" stop-color="#3a3123"/>
+      <stop offset="1" stop-color="#141210"/>
+    </linearGradient>
+    <radialGradient id="zHalo" cx="50%" cy="36%" r="54%">
+      <stop offset="0" stop-color="#E8CC97" stop-opacity=".34"/>
+      <stop offset="1" stop-color="#E8CC97" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="zStone" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F4EAD3"/>
+      <stop offset=".45" stop-color="#CDB88E"/>
+      <stop offset="1" stop-color="#7E6A45"/>
+    </linearGradient>
+    <linearGradient id="zHair" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#D3AE73"/>
+      <stop offset="1" stop-color="#6B5432"/>
+    </linearGradient>
+    <linearGradient id="zCloth" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#94794A"/>
+      <stop offset="1" stop-color="#352D20"/>
+    </linearGradient>
+    <filter id="zGlow" x="-70%" y="-70%" width="240%" height="240%">
+      <feGaussianBlur stdDeviation="5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect x="0" y="-25" width="300" height="450" fill="url(#zBg)"/>
+  <circle cx="150" cy="150" r="152" fill="url(#zHalo)"/>
+
+  <!-- sky rays -->
+  <g stroke="#E8CC97" stroke-width="1.1" opacity=".18" stroke-linecap="round">
+    <line x1="150" y1="34" x2="150" y2="74"/>
+    <line x1="88"  y1="52" x2="104" y2="88"/>
+    <line x1="212" y1="52" x2="196" y2="88"/>
+    <line x1="44"  y1="104" x2="80"  y2="124"/>
+    <line x1="256" y1="104" x2="220" y2="124"/>
+  </g>
+
+  <!-- niche arch -->
+  <path d="M42,400 V152 A108,108 0 0 1 258,152 V400" fill="none" stroke="#C9A46B" stroke-width="1.2" opacity=".26"/>
+
+  <!-- shoulders / drapery -->
+  <path d="M34,400 C40,326 76,296 120,288 L180,288 C224,296 260,326 266,400 Z" fill="url(#zCloth)"/>
+  <g stroke="#241f16" stroke-width="1.7" opacity=".45" fill="none" stroke-linecap="round">
+    <path d="M110,300 C105,338 101,370 99,400"/>
+    <path d="M190,300 C195,338 199,370 201,400"/>
+    <path d="M150,300 V400"/>
+    <path d="M128,318 C126,350 124,376 123,400"/>
+    <path d="M172,318 C174,350 176,376 177,400"/>
+  </g>
+  <!-- clasp -->
+  <circle cx="150" cy="306" r="7" fill="#C9A46B"/>
+  <circle cx="150" cy="306" r="3" fill="#3a3020"/>
+
+  <!-- neck -->
+  <path d="M132,242 C132,270 130,284 123,291 C140,300 160,300 177,291 C170,284 168,270 168,242 Z" fill="url(#zStone)"/>
+
+  <!-- head -->
+  <ellipse cx="150" cy="204" rx="45" ry="55" fill="url(#zStone)"/>
+
+  <!-- beard -->
+  <path d="M108,202 C108,256 127,292 150,292 C173,292 192,256 192,202 C184,234 168,246 150,246 C132,246 116,234 108,202 Z" fill="url(#zHair)"/>
+  <g fill="#5c4728" opacity=".55">
+    <circle cx="131" cy="268" r="7"/><circle cx="150" cy="278" r="8"/><circle cx="169" cy="268" r="7"/>
+    <circle cx="120" cy="248" r="6"/><circle cx="180" cy="248" r="6"/>
+  </g>
+
+  <!-- moustache -->
+  <path d="M128,228 C138,222 162,222 172,228 C162,234 138,234 128,228 Z" fill="#6B5432"/>
+
+  <!-- hair -->
+  <path d="M103,202 C100,152 120,128 150,128 C180,128 200,152 197,202 C193,174 177,158 150,158 C123,158 107,174 103,202 Z" fill="url(#zHair)"/>
+  <g fill="#5c4728" opacity=".5">
+    <circle cx="115" cy="168" r="8"/><circle cx="133" cy="152" r="9"/>
+    <circle cx="150" cy="146" r="9"/><circle cx="167" cy="152" r="9"/>
+    <circle cx="185" cy="168" r="8"/>
+  </g>
+
+  <!-- laurel wreath -->
+  <path d="M102,180 C118,158 182,158 198,180" fill="none" stroke="#E8CC97" stroke-width="3" stroke-linecap="round"/>
+  <g fill="#E8CC97">
+    <ellipse cx="114" cy="172" rx="7" ry="3.4" transform="rotate(-38 114 172)"/>
+    <ellipse cx="130" cy="163" rx="7" ry="3.4" transform="rotate(-22 130 163)"/>
+    <ellipse cx="150" cy="159" rx="7" ry="3.4"/>
+    <ellipse cx="170" cy="163" rx="7" ry="3.4" transform="rotate(22 170 163)"/>
+    <ellipse cx="186" cy="172" rx="7" ry="3.4" transform="rotate(38 186 172)"/>
+  </g>
+
+  <!-- brow -->
+  <g stroke="#6B5432" stroke-width="3" fill="none" stroke-linecap="round">
+    <path d="M120,190 C129,183 141,182 147,186"/>
+    <path d="M180,190 C171,183 159,182 153,186"/>
+  </g>
+  <!-- eyes -->
+  <ellipse cx="132" cy="201" rx="8.5" ry="4.6" fill="#4a3c26"/>
+  <ellipse cx="168" cy="201" rx="8.5" ry="4.6" fill="#4a3c26"/>
+  <!-- nose -->
+  <path d="M150,190 V216 L142,220" fill="none" stroke="#8d7853" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- lightning bolt -->
+  <g transform="translate(238,262) rotate(12) scale(1.25)" filter="url(#zGlow)">
+    <path d="M6,-52 L-16,-2 L-2,-2 L-9,44 L18,-10 L2,-10 Z"
+          fill="#F6E3B4" stroke="#FBECC9" stroke-width="1.2" stroke-linejoin="round"/>
+  </g>
+
+  <!-- plinth -->
+  <rect x="18" y="386" width="264" height="14" fill="#241f18"/>
+  <rect x="18" y="386" width="264" height="2" fill="#C9A46B" opacity=".5"/>
+</svg>

@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -25 300 450" width="300" height="450">
+  <defs>
+    <linearGradient id="hBg" x1=".2" y1="0" x2=".8" y2="1">
+      <stop offset="0" stop-color="#2b1f1b"/>
+      <stop offset="1" stop-color="#0e0c0b"/>
+    </linearGradient>
+    <radialGradient id="hHalo" cx="50%" cy="62%" r="56%">
+      <stop offset="0" stop-color="#E07A3C" stop-opacity=".3"/>
+      <stop offset="1" stop-color="#E07A3C" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="hStone" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#CBBFAC"/>
+      <stop offset=".45" stop-color="#8E8069"/>
+      <stop offset="1" stop-color="#4A4034"/>
+    </linearGradient>
+    <linearGradient id="hHelm" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#8E7A52"/>
+      <stop offset="1" stop-color="#2E251A"/>
+    </linearGradient>
+    <linearGradient id="hCloth" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#5A4632"/>
+      <stop offset="1" stop-color="#221A15"/>
+    </linearGradient>
+    <linearGradient id="hFlame" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#E8CC97"/>
+      <stop offset=".5" stop-color="#E0913C"/>
+      <stop offset="1" stop-color="#B8442A"/>
+    </linearGradient>
+    <filter id="hGlow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="6" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect x="0" y="-25" width="300" height="450" fill="url(#hBg)"/>
+  <circle cx="150" cy="240" r="156" fill="url(#hHalo)"/>
+
+  <!-- embers -->
+  <g fill="#E0913C" opacity=".45">
+    <circle cx="66" cy="128" r="2"/><circle cx="238" cy="104" r="1.6"/>
+    <circle cx="88" cy="72" r="1.4"/><circle cx="216" cy="158" r="2.2"/>
+    <circle cx="52" cy="196" r="1.6"/><circle cx="252" cy="214" r="1.8"/>
+  </g>
+
+  <!-- niche arch -->
+  <path d="M42,400 V152 A108,108 0 0 1 258,152 V400" fill="none" stroke="#B08D57" stroke-width="1.2" opacity=".24"/>
+
+  <!-- shoulders / drapery -->
+  <path d="M34,400 C40,326 76,296 120,288 L180,288 C224,296 260,326 266,400 Z" fill="url(#hCloth)"/>
+  <g stroke="#120e0b" stroke-width="1.7" opacity=".5" fill="none" stroke-linecap="round">
+    <path d="M110,300 C105,338 101,370 99,400"/>
+    <path d="M190,300 C195,338 199,370 201,400"/>
+    <path d="M150,300 V400"/>
+    <path d="M128,318 C126,350 124,376 123,400"/>
+    <path d="M172,318 C174,350 176,376 177,400"/>
+  </g>
+  <circle cx="150" cy="306" r="7" fill="#B08D57"/>
+  <circle cx="150" cy="306" r="3" fill="#1d1712"/>
+
+  <!-- neck -->
+  <path d="M132,246 C132,272 130,285 123,292 C140,300 160,300 177,292 C170,285 168,272 168,246 Z" fill="url(#hStone)"/>
+
+  <!-- head, sunk in shadow -->
+  <ellipse cx="150" cy="204" rx="45" ry="55" fill="url(#hStone)"/>
+  <ellipse cx="150" cy="196" rx="45" ry="48" fill="#17120e" opacity=".55"/>
+
+  <!-- short beard -->
+  <path d="M112,208 C112,252 129,282 150,282 C171,282 188,252 188,208 C181,234 167,244 150,244 C133,244 119,234 112,208 Z" fill="#2E251A"/>
+
+  <!-- helm of darkness: dome + cheek guards + nasal -->
+  <path d="M99,244 C95,158 120,122 150,122 C180,122 205,158 201,244
+           L186,244 L186,198 C186,172 171,157 150,157 C129,157 114,172 114,198 L114,244 Z"
+        fill="url(#hHelm)"/>
+  <path d="M114,198 C114,172 129,157 150,157 C171,157 186,172 186,198"
+        fill="none" stroke="#B08D57" stroke-width="1.6" opacity=".7"/>
+  <!-- nasal bar -->
+  <path d="M144,186 h12 v46 l-6,8 l-6,-8 Z" fill="url(#hHelm)" stroke="#B08D57" stroke-width="1.2" opacity=".95"/>
+  <!-- crest -->
+  <path d="M150,122 C168,116 182,96 180,72 C170,86 158,98 150,104 C142,98 130,86 120,72 C118,96 132,116 150,122 Z"
+        fill="#8E7A52"/>
+  <path d="M150,104 V122" stroke="#B08D57" stroke-width="1.4" opacity=".8"/>
+
+  <!-- burning eyes in the helm shadow -->
+  <g filter="url(#hGlow)">
+    <ellipse cx="130" cy="200" rx="7.5" ry="4.2" fill="#E0913C"/>
+    <ellipse cx="170" cy="200" rx="7.5" ry="4.2" fill="#E0913C"/>
+  </g>
+
+  <!-- flame -->
+  <g transform="translate(238,266) scale(1.5)" filter="url(#hGlow)">
+    <path d="M0,-32 C18,-12 10,4 4,14 C2,20 0,24 0,24 C0,24 -2,20 -4,14 C-10,4 -18,-12 0,-32 Z"
+          fill="url(#hFlame)"/>
+    <path d="M0,-13 C7,-3 3,5 1,10 C0,12 0,13 0,13 C0,13 0,12 -1,10 C-3,5 -7,-3 0,-13 Z"
+          fill="#2b1f1b" opacity=".75"/>
+  </g>
+
+  <rect x="18" y="386" width="264" height="14" fill="#1a1512"/>
+  <rect x="18" y="386" width="264" height="2" fill="#B08D57" opacity=".5"/>
+</svg>

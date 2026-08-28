@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -25 300 450" width="300" height="450">
+  <defs>
+    <linearGradient id="pBg" x1=".2" y1="0" x2=".8" y2="1">
+      <stop offset="0" stop-color="#25342f"/>
+      <stop offset="1" stop-color="#111413"/>
+    </linearGradient>
+    <radialGradient id="pHalo" cx="50%" cy="36%" r="54%">
+      <stop offset="0" stop-color="#A8D0BA" stop-opacity=".3"/>
+      <stop offset="1" stop-color="#A8D0BA" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="pStone" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#EFEBD9"/>
+      <stop offset=".45" stop-color="#C3BE97"/>
+      <stop offset="1" stop-color="#6E7255"/>
+    </linearGradient>
+    <linearGradient id="pHair" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#A8D0BA"/>
+      <stop offset="1" stop-color="#41604F"/>
+    </linearGradient>
+    <linearGradient id="pCloth" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#5E7E6B"/>
+      <stop offset="1" stop-color="#232E28"/>
+    </linearGradient>
+    <filter id="pGlow" x="-70%" y="-70%" width="240%" height="240%">
+      <feGaussianBlur stdDeviation="5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect x="0" y="-25" width="300" height="450" fill="url(#pBg)"/>
+  <circle cx="150" cy="150" r="152" fill="url(#pHalo)"/>
+
+  <!-- swell lines -->
+  <g stroke="#A8D0BA" stroke-width="1.2" opacity=".2" fill="none" stroke-linecap="round">
+    <path d="M28,96 C58,80 86,112 116,96"/>
+    <path d="M184,96 C214,80 242,112 272,96"/>
+    <path d="M20,132 C50,116 78,148 108,132"/>
+    <path d="M192,132 C222,116 250,148 280,132"/>
+  </g>
+
+  <!-- niche arch -->
+  <path d="M42,400 V152 A108,108 0 0 1 258,152 V400" fill="none" stroke="#7FA48C" stroke-width="1.2" opacity=".3"/>
+
+  <!-- shoulders / drapery -->
+  <path d="M34,400 C40,326 76,296 120,288 L180,288 C224,296 260,326 266,400 Z" fill="url(#pCloth)"/>
+  <g stroke="#16201b" stroke-width="1.7" opacity=".45" fill="none" stroke-linecap="round">
+    <path d="M110,300 C105,338 101,370 99,400"/>
+    <path d="M190,300 C195,338 199,370 201,400"/>
+    <path d="M150,300 V400"/>
+    <path d="M128,318 C126,350 124,376 123,400"/>
+    <path d="M172,318 C174,350 176,376 177,400"/>
+  </g>
+  <circle cx="150" cy="306" r="7" fill="#A8D0BA"/>
+  <circle cx="150" cy="306" r="3" fill="#243029"/>
+
+  <!-- neck -->
+  <path d="M132,242 C132,270 130,284 123,291 C140,300 160,300 177,291 C170,284 168,270 168,242 Z" fill="url(#pStone)"/>
+
+  <!-- head -->
+  <ellipse cx="150" cy="204" rx="45" ry="55" fill="url(#pStone)"/>
+
+  <!-- flowing beard, longer and wave-shaped -->
+  <path d="M107,200 C107,262 126,300 150,300 C174,300 193,262 193,200 C184,236 168,248 150,248 C132,248 116,236 107,200 Z" fill="url(#pHair)"/>
+  <g fill="none" stroke="#33503F" stroke-width="2.4" opacity=".6" stroke-linecap="round">
+    <path d="M128,254 C124,272 128,286 132,296"/>
+    <path d="M150,258 C148,276 150,288 150,298"/>
+    <path d="M172,254 C176,272 172,286 168,296"/>
+  </g>
+
+  <!-- moustache -->
+  <path d="M127,228 C138,221 162,221 173,228 C162,235 138,235 127,228 Z" fill="#41604F"/>
+
+  <!-- wild hair -->
+  <path d="M102,204 C98,150 120,126 150,126 C180,126 202,150 198,204 C193,174 177,158 150,158 C123,158 107,174 102,204 Z" fill="url(#pHair)"/>
+  <g fill="none" stroke="#33503F" stroke-width="3" opacity=".55" stroke-linecap="round">
+    <path d="M112,178 C118,160 128,150 140,146"/>
+    <path d="M150,142 C150,152 150,156 150,158"/>
+    <path d="M188,178 C182,160 172,150 160,146"/>
+  </g>
+  <g fill="#A8D0BA" opacity=".45">
+    <circle cx="116" cy="164" r="7"/><circle cx="134" cy="149" r="8"/>
+    <circle cx="150" cy="143" r="8"/><circle cx="166" cy="149" r="8"/>
+    <circle cx="184" cy="164" r="7"/>
+  </g>
+
+  <!-- brow -->
+  <g stroke="#41604F" stroke-width="3" fill="none" stroke-linecap="round">
+    <path d="M120,190 C129,183 141,182 147,186"/>
+    <path d="M180,190 C171,183 159,182 153,186"/>
+  </g>
+  <ellipse cx="132" cy="201" rx="8.5" ry="4.6" fill="#3f4a3c"/>
+  <ellipse cx="168" cy="201" rx="8.5" ry="4.6" fill="#3f4a3c"/>
+  <path d="M150,190 V216 L142,220" fill="none" stroke="#7f8467" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- trident -->
+  <g transform="translate(240,258) rotate(10)" filter="url(#pGlow)"
+     fill="none" stroke="#CFEBD9" stroke-width="5" stroke-linecap="round">
+    <path d="M0,-18 V56"/>
+    <path d="M-22,-18 H22"/>
+    <path d="M-22,-18 V-46"/>
+    <path d="M22,-18 V-46"/>
+    <path d="M0,-18 V-54"/>
+  </g>
+
+  <rect x="18" y="386" width="264" height="14" fill="#1b2420"/>
+  <rect x="18" y="386" width="264" height="2" fill="#7FA48C" opacity=".55"/>
+</svg>

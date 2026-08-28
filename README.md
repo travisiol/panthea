@@ -34,6 +34,9 @@ folder `/ (root)` → Save. The site is live at
 
 ```
 index.html      the whole site — CSS, JS and SVG all inline
+favicon.ico     tab icon, 32 and 48 px in one file
+favicon-*.png   32 / 48 / 180 (apple-touch) / 256
+favicon-source.png   the full-size original, kept for re-cropping
 gods/
   zeus.jpg      artwork for the three playable gods
   poseidon.jpg
